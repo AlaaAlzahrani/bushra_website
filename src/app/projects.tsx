@@ -36,7 +36,7 @@ export function Projects() {
           My Projects
         </h2>
         <p className="text-center text-gray-600 mb-12">
-          Here are some of the projects I've worked on. Each demonstrates different skills and technologies.
+          Here are some of the projects I&apos;ve worked on. Each demonstrates different skills and technologies.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
