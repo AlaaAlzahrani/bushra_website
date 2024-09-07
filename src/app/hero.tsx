@@ -60,7 +60,7 @@ function Hero() {
           <Typography
             variant="lead"
             color="gray"
-            className="mt-4 mb-12 w-full md:max-w-full lg:max-w-4xl text-xl leading-relaxed text-justify"
+            className="mt-4 mb-12 w-full md:max-w-full lg:max-w-4xl leading-relax"
           >
             Dynamic and results-driven HR professional with a proven track record in multinational environments. A self-starter with a deep, practical understanding of diverse HR functions, consistently delivering impactful solutions. 
             Known for sharp judgment and a natural talent for authentic communication and influence. 
