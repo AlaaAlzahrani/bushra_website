@@ -1,4 +1,5 @@
 "use client";
+
 import { Typography } from "@material-tailwind/react";
 import {
   AcademicCapIcon,
@@ -13,6 +14,7 @@ const EDUCATION = [
     icon: AcademicCapIcon,
     title: "Certified Web Developer - Web Development Institute",
     date: "2016",
+    logo: "/logos/logo-amazon.svg",
     children:
       "This comprehensive program covered HTML5, CSS3, JavaScript, responsive design, server-side scripting, and web security.",
   },
@@ -103,54 +105,46 @@ const SKILLS = [
 
 export function InformationSection() {
   return (
-    <section className="pb-28 px-8">
-      <div className="grid xl:grid-cols-2 md:grid-cols-1 container gap-20 mx-auto items-start">
+    <section className="py-16 px-8">
+      <div className="container mx-auto grid md:grid-cols-2 gap-12">
         <div>
-          <div className="mb-10">
-            <Typography color="blue-gray" className="mb-2 text-3xl font-bold">
-              Education & Certifications
-            </Typography>
-            <Typography variant="lead" className="!text-gray-500">
-              See my education history.
-            </Typography>
-          </div>
-          <div className="container mx-auto grid grid-cols-1 gap-16 gap-y-12">
+          <h2 className="text-3xl font-bold text-blue-gray-900 mb-4">
+            Education & Certifications
+          </h2>
+          <p className="text-gray-600 mb-8">
+            See my education history.
+          </p>
+          <div className="space-y-8">
             {EDUCATION.map((props, idx) => (
               <InfoCard key={idx} {...props} />
             ))}
           </div>
         </div>
         <div>
-          <div className="mb-10">
-            <Typography color="blue-gray" className="mb-2 text-3xl font-bold">
-              Experience
-            </Typography>
-            <Typography variant="lead" className="!text-gray-500">
-              See my experience as a developer.
-            </Typography>
-          </div>
-          <div className="container mx-auto grid grid-cols-1 gap-16 gap-y-12">
+          <h2 className="text-3xl font-bold text-blue-gray-900 mb-4">
+            Experience
+          </h2>
+          <p className="text-gray-600 mb-8">
+            See my experience as a developer.
+          </p>
+          <div className="space-y-8">
             {EXPERIENCE.map((props, idx) => (
               <InfoCard key={idx} {...props} />
             ))}
           </div>
         </div>
       </div>
-      <div className="container gap-20 mt-36 mx-auto items-center">
-        <div>
-          <div className="mb-10">
-            <Typography color="blue-gray" className="mb-2 text-3xl font-bold">
-              Skills
-            </Typography>
-            <Typography variant="lead" className="!text-gray-500">
-              Check out my technical and soft skills.
-            </Typography>
-          </div>
-          <div className="container mx-auto grid grid-cols-1 gap-16 gap-y-12 lg:grid-cols-2">
-            {SKILLS.map((props, idx) => (
-              <InfoCard key={idx} {...props} />
-            ))}
-          </div>
+      <div className="container mx-auto mt-16">
+        <h2 className="text-3xl font-bold text-blue-gray-900 mb-4">
+          Skills
+        </h2>
+        <p className="text-gray-600 mb-8">
+          Check out my technical and soft skills.
+        </p>
+        <div className="grid md:grid-cols-2 gap-8">
+          {SKILLS.map((props, idx) => (
+            <InfoCard key={idx} {...props} />
+          ))}
         </div>
       </div>
     </section>

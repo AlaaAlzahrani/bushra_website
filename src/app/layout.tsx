@@ -1,7 +1,8 @@
+"use client";
+
 import "./globals.css";
-import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
-import { Layout, FixedPlugin } from "@/components";
+import { ThemeProvider } from "@material-tailwind/react";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -9,11 +10,6 @@ const roboto = Roboto({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: "NextJS Tailwind Resume Tailwind",
-  description:
-    "Download Tailwind Resume Page a Free Landing Page Template developed by Creative Tim. Based on Tailwind CSS and Material Tailwind, see the live demo on our site and join over 2.000.000 web creatives!",
-};
 
 export default function RootLayout({
   children,
@@ -23,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="shortcut icon" href="/favicon.png" type="image/png" />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -30,13 +27,11 @@ export default function RootLayout({
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
         />
-        <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+        <title>Bushra Alzahrani Wesbite</title>
+        <meta name="description" content="Welcome to Bushra Alzahrani's Personal Website!" />
       </head>
       <body className={roboto.className}>
-        <Layout>
-          {children}
-          <FixedPlugin />
-        </Layout>
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );
