@@ -28,7 +28,7 @@ export default function RootLayout({
           referrerPolicy="no-referrer"
         />
         <title>Bushra Alzahrani Wesbite</title>
-        <meta name="description" content="Welcome to Bushra Alzahrani's Personal Website!" />
+        <meta name="description" content="Welcome to Bushra Alzahrani's Personal Website" />
       </head>
       <body className={roboto.className}>
         <ThemeProvider>{children}</ThemeProvider>

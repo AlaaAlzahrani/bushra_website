@@ -2,13 +2,6 @@
 
 import { Typography } from "@material-tailwind/react";
 import { useState, useEffect } from "react";
-import { Cormorant_Garamond } from 'next/font/google';
-
-const cormorantGaramond = Cormorant_Garamond({
-  subsets: ['latin'],
-  weight: ['300', '400', '700'],
-  style: ['normal', 'italic'],
-});
 
 function Hero() {
   const [isVisible, setIsVisible] = useState(false);
@@ -37,20 +30,19 @@ function Hero() {
               }`}
               style={{ transitionDelay: `${index * 200}ms` }}
             >
-              <span className={`${cormorantGaramond.className} font-light italic text-white text-4xl`}>
+              <span className="font-light italic text-white text-4xl">
                 {word}
               </span>
             </div>
           ))}
         </div>
       </div>
-      {/* Rest of the component remains the same */}
       <div className="grid place-items-center min-h-[92vh] px-8">
         <div className="container mx-auto grid place-items-center h-max text-center">
           <Typography 
             variant="h1" 
             color="blue-gray"
-            className={`${cormorantGaramond.className} transition-colors duration-300 hover:text-[#0072b1] cursor-default`}
+            className="transition-colors duration-300 hover:text-[#0072b1] cursor-default"
           >
             <br/>
             <br/>
