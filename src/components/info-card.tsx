@@ -1,9 +1,12 @@
+import React from "react";
 import {
   Card,
   CardHeader,
   CardBody,
   Typography,
   IconButton,
+  List,
+  ListItem,
 } from "@material-tailwind/react";
 
 interface InfoCardProps {
@@ -14,6 +17,19 @@ interface InfoCardProps {
 }
 
 export function InfoCard({ icon: Icon, title, date, children }: InfoCardProps) {
+  const renderContent = () => {
+    if (typeof children === "string") {
+      return children.split("\n").map((item, index) => (
+        <ListItem key={index} className="p-0">
+          <Typography className="font-normal !text-gray-500">
+            {item.trim()}
+          </Typography>
+        </ListItem>
+      ));
+    }
+    return children;
+  };
+
   return (
     <Card>
       <CardHeader
@@ -37,9 +53,9 @@ export function InfoCard({ icon: Icon, title, date, children }: InfoCardProps) {
         </IconButton>
       </CardHeader>
       <CardBody className="grid justify-start !px-3.5 pt-2">
-        <Typography className=" font-normal !text-gray-500">
-          {children}
-        </Typography>
+        <List className="p-0">
+          {renderContent()}
+        </List>
       </CardBody>
     </Card>
   );
