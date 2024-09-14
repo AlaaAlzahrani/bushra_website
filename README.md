@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a personal website. It serves as both a portfolio and a learning experience in front-end web development.
+This project is an attempt to learn front-end web development.
 
 ## Technologies Used
 
@@ -12,12 +12,6 @@ This project is a personal website. It serves as both a portfolio and a learning
 - [React](https://reactjs.org/) - JavaScript library for building user interfaces
 - [TypeScript](https://www.typescriptlang.org/) - Typed superset of JavaScript
 
-## Features
-
-- Responsive design
-- Dynamic content rendering
-- Interactive UI components
-- SEO optimization
 
 ## Project Structure
 
@@ -36,13 +30,6 @@ This project is a personal website. It serves as both a portfolio and a learning
 3. Run the development server: `npm run dev`
 4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-## Learning Objectives
-
-This project serves as a practical exercise in:
-
-- Building responsive layouts with Tailwind CSS
-- Implementing component-based architecture with React and Next.js
-- Typing JavaScript code with TypeScript
 
 ## Future Enhancements
 
