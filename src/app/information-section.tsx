@@ -15,7 +15,7 @@ const EDUCATION = [
 • Enhancing analytical capabilities through case studies and real-world business projects.`,
   },
   {
-    imageSrc: "/image/cipd.jpg",
+    imageSrc: "/image/cipd.png",
     imageAlt: "CIPD Logo",
     title: "Associate Diploma in People Management (Level 5) - CIPD",
     date: "2022-2023",
