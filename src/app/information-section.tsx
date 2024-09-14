@@ -25,7 +25,7 @@ const EDUCATION = [
 • Strengthened my leadership skills through the study of professional behaviors`,
   },
   {
-    imageSrc: "/image/Imam.jpg",
+    imageSrc: "/image/imam.png",
     imageAlt: "Imam Logo",
     title: "BA in English Language and Translation - Al-Imam Muhammad Ibn Saud Islamic University",
     date: "2016-2021",
