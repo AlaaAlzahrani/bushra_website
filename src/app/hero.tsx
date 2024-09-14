@@ -15,7 +15,7 @@ function Hero() {
   return (
     <div className="relative w-full">
       <div 
-        className={`absolute top-0 left-0 right-0 h-20 bg-[#0072b1] bg-opacity-100 overflow-hidden transition-all duration-1000 ${
+        className={`absolute top-0 left-0 right-0 h-20 bg-[#B6D0E2] bg-opacity-100 overflow-hidden transition-all duration-1000 ${
           isVisible ? 'opacity-100' : 'opacity-0'
         }`}
       >
@@ -42,19 +42,26 @@ function Hero() {
           <Typography 
             variant="h1" 
             color="blue-gray"
-            className="transition-colors duration-300 hover:text-[#0072b1] cursor-default"
+            className="transition-colors duration-300 hover:text-[#B6D0E2] cursor-default"
           >
             <br/>
             <br/>
-            Bushra Alzahrani
+            Bushra Alzahrani || CIPD5 || MBA
             <br/>
+          </Typography>
+          <Typography
+            variant="lead"
+            color="gray"
+            className="mt-4 mb-12 w-full md:max-w-full lg:max-w-1xl text-[18px]"
+          >
+            Strategic People Professional Visionary, Talent Development Catalyst
           </Typography>
           <Typography
             variant="lead"
             color="gray"
             className="mt-4 mb-12 w-full md:max-w-full lg:max-w-4xl leading-relax"
           >
-            Dynamic and results-driven HR professional with a proven track record in multinational environments. A self-starter with a deep, practical understanding of diverse HR functions, consistently delivering impactful solutions. 
+            People Professional with a proven track record in multinational environments. A self-starter with a deep, practical understanding of diverse people profession areas, consistently delivering impactful solutions. 
             Known for sharp judgment and a natural talent for authentic communication and influence. 
             Thrives in fast-paced settings, offering expert counseling with an unwavering commitment to confidentiality.
           </Typography>
@@ -63,7 +70,7 @@ function Hero() {
           </Typography>
           <div className="flex gap-4 mt-4">
             <a
-              href="https://twitter.com/yourtwitterhandle"
+              href="https://twitter.com/BushraAlzahran8"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white text-blue-400 hover:bg-blue-50 transition-colors"

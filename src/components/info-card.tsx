@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import {
   Card,
   CardHeader,
@@ -9,27 +10,35 @@ import {
   ListItem,
 } from "@material-tailwind/react";
 
-interface InfoCardProps {
-  icon: React.ElementType;
+interface BaseInfoCardProps {
   title: string;
   date: string;
   children: React.ReactNode;
 }
 
-export function InfoCard({ icon: Icon, title, date, children }: InfoCardProps) {
-  const renderContent = () => {
-    if (typeof children === "string") {
-      return children.split("\n").map((item, index) => (
-        <ListItem key={index} className="p-0">
-          <Typography className="font-normal !text-gray-500">
-            {item.trim()}
-          </Typography>
-        </ListItem>
-      ));
-    }
-    return children;
-  };
+interface IconInfoCardProps extends BaseInfoCardProps {
+  icon: React.ElementType;
+}
 
+interface ImageInfoCardProps extends BaseInfoCardProps {
+  imageSrc: string;
+  imageAlt: string;
+}
+
+const renderContent = (children: React.ReactNode) => {
+  if (typeof children === "string") {
+    return children.split("\n").map((item, index) => (
+      <ListItem key={index} className="p-0">
+        <Typography className="font-normal !text-gray-500">
+          {item.trim()}
+        </Typography>
+      </ListItem>
+    ));
+  }
+  return children;
+};
+
+export function IconInfoCard({ icon: Icon, title, date, children }: IconInfoCardProps) {
   return (
     <Card>
       <CardHeader
@@ -54,11 +63,44 @@ export function InfoCard({ icon: Icon, title, date, children }: InfoCardProps) {
       </CardHeader>
       <CardBody className="grid justify-start !px-3.5 pt-2">
         <List className="p-0">
-          {renderContent()}
+          {renderContent(children)}
         </List>
       </CardBody>
     </Card>
   );
 }
 
-export default InfoCard;
+export function ImageInfoCard({ imageSrc, imageAlt, title, date, children }: ImageInfoCardProps) {
+  return (
+    <Card>
+      <CardHeader
+        className="flex items-center justify-between rounded-none overflow-visible h-28"
+        floated={false}
+        shadow={false}
+      >
+        <div className="flex items-center justify-between w-full">
+          <div className="flex flex-col gap-1">
+            <Typography color="blue" className="font-bold text-xs">
+              {date}
+            </Typography>
+            <Typography color="blue-gray" variant="h5" className="w-full">
+              {title}
+            </Typography>
+          </div>
+          <Image
+            src={imageSrc}
+            alt={imageAlt}
+            width={80}
+            height={80}
+            className="rounded-full object-cover"
+          />
+        </div>
+      </CardHeader>
+      <CardBody className="grid justify-start !px-3.5 pt-2">
+        <List className="p-0">
+          {renderContent(children)}
+        </List>
+      </CardBody>
+    </Card>
+  );
+}
