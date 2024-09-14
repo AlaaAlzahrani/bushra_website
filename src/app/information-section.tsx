@@ -170,74 +170,75 @@ const VOLUNTEERING = [
 
 const SKILLS = [
   {
-  icon: FireIcon,
-  title: "Time Management",
-  date: "Soft Skills",
-  children: "Master of juggling multiple tasks and deadlines. I can prioritize like a pro, ensuring everything gets done efficiently and on time.",
+    icon: FireIcon,
+    title: "Time Management",
+    date: "Soft Skills",
+    children: "Master of juggling multiple tasks and deadlines. I can prioritize like a pro, ensuring everything gets done efficiently and on time.",
   },
   {
-  icon: FireIcon,
-  title: "Effective Communication",
-  date: "Soft Skills",
-  children: "Clear and articulate communicator, both verbally and in writing. I can convey complex ideas simply and engage effectively with all levels of an organization.",
+    icon: FireIcon,
+    title: "Effective Communication",
+    date: "Soft Skills",
+    children: "Clear and articulate communicator, both verbally and in writing. I can convey complex ideas simply and engage effectively with all levels of an organization.",
   },
   {
-  icon: FireIcon,
-  title: "Adaptability",
-  date: "Soft Skills",
-  children: "Quick to embrace change and thrive in dynamic environments. I can pivot strategies on a dime and find creative solutions to unexpected challenges. My flexibility keeps me cool under pressure and always ready for what's next.",
+    icon: FireIcon,
+    title: "Adaptability",
+    date: "Soft Skills",
+    children: "Quick to embrace change and thrive in dynamic environments. I can pivot strategies on a dime and find creative solutions to unexpected challenges. My flexibility keeps me cool under pressure and always ready for what's next.",
   },
   {
-  icon: FireIcon,
-  title: "Strategic Planning",
-  date: "Professional Skills",
-  children: "Adept at seeing the big picture and plotting the course to get there. I love crafting long-term plans that turn ambitious goals into reality.",
+    icon: FireIcon,
+    title: "Strategic Planning",
+    date: "Professional Skills",
+    children: "Adept at seeing the big picture and plotting the course to get there. I love crafting long-term plans that turn ambitious goals into reality.",
   },
   {
-  icon: FireIcon,
-  title: "Follow Up",
-  date: "Professional Skills",
-  children: "Never let a task slip through the cracks. I'm known for my persistent follow-through, ensuring every project reaches completion.",
+    icon: FireIcon,
+    title: "Follow Up",
+    date: "Professional Skills",
+    children: "Never let a task slip through the cracks. I'm known for my persistent follow-through, ensuring every project reaches completion.",
   },
   {
-  icon: FireIcon,
-  title: "Negotiations",
-  date: "Professional Skills",
-  children: "Expert at finding win-win solutions. Whether it's securing a deal or resolving internal issues, I know how to navigate complex negotiations with finesse.",
+    icon: FireIcon,
+    title: "Negotiations",
+    date: "Professional Skills",
+    children: "Expert at finding win-win solutions. Whether it's securing a deal or resolving internal issues, I know how to navigate complex negotiations with finesse.",
   },
   {
-  icon: FireIcon,
-  title: "Attention to Detail",
-  date: "Professional Skills",
-  children: "Meticulous and thorough in all tasks. Nothing escapes my notice, ensuring high-quality outcomes in every project I undertake.",
+    icon: FireIcon,
+    title: "Attention to Detail",
+    date: "Professional Skills",
+    children: "Meticulous and thorough in all tasks. Nothing escapes my notice, ensuring high-quality outcomes in every project I undertake.",
   },
   {
-  icon: FireIcon,
-  title: "Conflict Resolution",
-  date: "Interpersonal Skills",
-  children: "Skilled mediator with a knack for finding common ground. I can turn heated disagreements into productive discussions, fostering harmony in the workplace.",
+    icon: FireIcon,
+    title: "Conflict Resolution",
+    date: "Interpersonal Skills",
+    children: "Skilled mediator with a knack for finding common ground. I can turn heated disagreements into productive discussions, fostering harmony in the workplace.",
   },
   {
-  icon: FireIcon,
-  title: "Teamwork",
-  date: "Interpersonal Skills",
-  children: "True team player who thrives in collaborative environments. I believe in the power of diverse perspectives and know how to bring out the best in my colleagues.",
+    icon: FireIcon,
+    title: "Teamwork",
+    date: "Interpersonal Skills",
+    children: "True team player who thrives in collaborative environments. I believe in the power of diverse perspectives and know how to bring out the best in my colleagues.",
   },
   {
-  icon: FireIcon,
-  title: "Analytical Thinking",
-  date: "Cognitive Skills",
-  children: "Sharp problem-solver with a keen eye for details. I excel at breaking down complex issues and finding innovative solutions.",
+    icon: FireIcon,
+    title: "Analytical Thinking",
+    date: "Cognitive Skills",
+    children: "Sharp problem-solver with a keen eye for details. I excel at breaking down complex issues and finding innovative solutions.",
   },
   ];
 
 
+
 const SectionTitle = ({ title }) => (
-  <h2 className="text-3xl font-bold text-blue-gray-900 mb-6 border-b-2 border-blue-500 pb-2">
+<h2 className="text-3xl font-bold text-blue-gray-900 mb-6 border-b-2 border-blue-500 pb-2">
     {title}
   </h2>
 );
-
+  
 const ImageSection = ({ title, data }) => (
   <div className="mb-16">
     <SectionTitle title={title} />
@@ -248,18 +249,18 @@ const ImageSection = ({ title, data }) => (
     </div>
   </div>
 );
-
-const IconSection = ({ title, data, gridCols = 1 }) => (
+  
+const IconSection = ({ title, data, columns = 1 }) => (
   <div className="mb-16">
     <SectionTitle title={title} />
-    <div className={`grid grid-cols-1 ${gridCols > 1 ? `md:grid-cols-${gridCols}` : ''} gap-8`}>
+    <div className={`grid grid-cols-1 md:grid-cols-${columns} gap-8`}>
       {data.map((props, idx) => (
         <IconInfoCard key={idx} {...props} />
       ))}
     </div>
   </div>
 );
-
+  
 export function InformationSection() {
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
@@ -268,7 +269,7 @@ export function InformationSection() {
           <ImageSection title="Education" data={EDUCATION} />
           <ImageSection title="Experience" data={EXPERIENCE} />
           <IconSection title="Volunteering" data={VOLUNTEERING} />
-          <IconSection title="Skills" data={SKILLS} gridCols={2} />
+          <IconSection title="Skills" data={SKILLS} columns={2} />
         </div>
       </div>
     </section>

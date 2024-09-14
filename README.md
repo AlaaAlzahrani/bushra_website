@@ -8,7 +8,6 @@ This project is an attempt to learn front-end web development.
 
 - [Next.js](https://nextjs.org/) - React framework for building user interfaces
 - [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
-- [Material Tailwind](https://material-tailwind.com/) - Material Design components for Tailwind CSS
 - [React](https://reactjs.org/) - JavaScript library for building user interfaces
 - [TypeScript](https://www.typescriptlang.org/) - Typed superset of JavaScript
 
